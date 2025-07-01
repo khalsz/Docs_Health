@@ -1,6 +1,8 @@
-from docx import Document
-from io import BytesIO
 from collections import Counter
+from io import BytesIO
+
+from docx import Document
+
 
 def read_docx(filepath):
     with open(filepath, "rb") as file:
@@ -8,7 +10,6 @@ def read_docx(filepath):
 
 
 def find_outcast(doc_prop: dict):
-    
     prop_freq = list(doc_prop.values())
     # check if all element of the list are the same
     if len(set(prop_freq)) == 1:
